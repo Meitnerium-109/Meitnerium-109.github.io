@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragati Prasad | Portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>✦ Pragati Prasad ✦</h1>
+      <p class="subtitle">Dual Degree Student | IIIT Hyderabad | Research Enthusiast</p>
+      <div class="star-divider">
+        <span>✧</span><span>✧</span><span>✧</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>✧ About Me ✧</h2>
+      <div class="card shimmer-effect">
+        <div class="profile-container">
+          <div class="profile-text">
+            <p><strong>✉ Email:</strong> pragatiprasad2006@gmail.com<br>
+            <strong>☎ Phone:</strong> +91 7204003381</p>
+            <p>STEM student currently pursuing a B.Tech in CND and M.Sc in Natural Sciences at IIIT Hyderabad. I am passionate about research, technology, reading, music, and trivia.</p>
+          </div>
+          <div class="profile-img-container">
+            <img src="assets\profile.jpg" alt="Pragati Prasad" class="profile-img"/>
+            <div class="profile-frame"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <h2>✦ Education ✦</h2>
+      <div class="card">
+        <ul class="fancy-list">
+          <li><span class="icon">✧</span> <strong>IIIT Hyderabad</strong> – B.Tech in CND + M.Sc in Natural Sciences (2024 - 2029)</li>
+          <li><span class="icon">✧</span> <strong>Presidency School</strong>, Bangalore – Secondary School (2022 - 2024)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <h2>✦ Experience ✦</h2>
+      <div class="card">
+        <ul class="fancy-list">
+          <li><span class="icon">✧</span> <strong>Content Writer</strong> – E-Cell, IIIT Hyderabad (Apr 2025–Present)</li>
+          <li><span class="icon">✧</span> <strong>Head of Marketing</strong> – Debsoc, IIIT Hyderabad (Apr 2025–Present)</li>
+          <li><span class="icon">✧</span> <strong>Writer</strong> – Ping!, IIIT Hyderabad (Apr 2025–Present)</li>
+          <li><span class="icon">✧</span> <strong>Researcher</strong> – ISACQ (Apr 2025–Present)</li>
+          <li><span class="icon">✧</span> <strong>Marketing Team</strong> – OSDG, IIIT Hyderabad (Apr 2025–Present)</li>
+          <li><span class="icon">✧</span> <strong>Marketing & Management</strong> – Electronics & Robotics Club (Apr 2025–Present)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="achievements">
+      <h2>✦ Achievements ✦</h2>
+      <div class="card">
+        <ul class="fancy-list">
+          <li><span class="icon">✧</span> DeccanCTF – 3rd Place (Feb 2025)</li>
+          <li><span class="icon">✧</span> IISc Pravega – 2nd Runner Up (Jan 2024)</li>
+          <li><span class="icon">✧</span> Hackathon Winner – DPS (Sep 2023)</li>
+          <li><span class="icon">✧</span> Outstanding Delegate – PresMUN (Sep 2023)</li>
+          <li><span class="icon">✧</span> Oratory Winner – Presidency (Aug 2023)</li>
+          <li><span class="icon">✧</span> Keyboard Recital – LCM Grade 1 (Jun 2018)</li>
+          <li><span class="icon">✧</span> IEO Winner – SOF (May 2015)</li>
+          <li><span class="icon">✧</span> Spelling Bee Champion – MaRRs (Sep 2013)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>✦ Skills ✦</h2>
+      <div class="card">
+        <ul class="fancy-list">
+          <li><span class="icon">✧</span> Python, C/C++, SQL</li>
+          <li><span class="icon">✧</span> Public Speaking, Debate, Marketing</li>
+          <li><span class="icon">✧</span> Creative writing, Music, Art</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="cv">
+      <h2>✦ CV ✦</h2>
+      <div class="card">
+        <div style="text-align: center;">
+          <a href="assets/cv_pragati_prasad.pdf" target="_blank" class="download-btn">Download My CV (PDF) ✧</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <h2>✦ Bangalore Views ✦</h2>
+      <div class="gallery-container">
+        <div class="gallery-slider">
+          <div class="slide active">
+            <img src="assets\bangalore1.jpg" alt="Bangalore View 1">
+          </div>
+          <div class="slide">
+            <img src="assets\bangalore2.jpg" alt="Bangalore View 2">
+          </div>
+          <div class="slide">
+            <img src="assets\bangalore3.jpg" alt="Bangalore View 3">
+          </div>
+        </div>
+        <button class="nav-btn prev">❮</button>
+        <button class="nav-btn next">❯</button>
+      </div>
+    </section>
+
+    <section class="section" id="text-analysis">
+      <h2>✦ Text Analyzer ✦</h2>
+      <div class="card">
+        <textarea id="inputText" rows="10" placeholder="Paste your 10000+ word text here..."></textarea><br/>
+        <button onclick="analyzeText()" class="analyze-btn">Analyze ✧</button>
+        <pre id="output"></pre>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Pragati Prasad. All rights reserved.</p>
+      <div class="star-divider">
+        <span>✧</span><span>✧</span><span>✧</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
