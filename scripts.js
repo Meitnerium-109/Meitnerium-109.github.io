@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Gallery functionality
   const gallery = document.querySelector('.gallery-slider');
   const slides = document.querySelectorAll('.slide');
   const prevBtn = document.querySelector('.prev');
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateGallery();
   }, 5000);
 
-  // Text Analyzer functionality
   function analyzeText() {
     const text = document.getElementById("inputText").value;
     const output = document.getElementById("output");
@@ -64,7 +62,14 @@ document.addEventListener("DOMContentLoaded", () => {
     output.textContent = result;
   }
 
-  // Event listeners for text analysis
   document.querySelector('.analyze-btn').addEventListener('click', analyzeText);
-});
 
+  console.log(`[Page View] - ${new Date().toLocaleString()} - URL: ${window.location.href}`);
+
+  document.body.addEventListener('click', (e) => {
+    const tagName = e.target.tagName;
+    const classList = e.target.className || "No Class";
+    const id = e.target.id || "No ID";
+    console.log(`[Click] - ${new Date().toLocaleString()} - Tag: ${tagName}, Class: ${classList}, ID: ${id}`);
+  });
+});
