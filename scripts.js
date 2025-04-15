@@ -64,12 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelector('.analyze-btn').addEventListener('click', analyzeText);
 
-  console.log(`[Page View] - ${new Date().toLocaleString()} - URL: ${window.location.href}`);
-
-  document.body.addEventListener('click', (e) => {
+  document.addEventListener('click', (e) => {
     const tagName = e.target.tagName;
-    const classList = e.target.className || "No Class";
-    const id = e.target.id || "No ID";
-    console.log(`[Click] - ${new Date().toLocaleString()} - Tag: ${tagName}, Class: ${classList}, ID: ${id}`);
+    const classes = e.target.className;
+    const id = e.target.id;
+    console.log(`Click on: Tag=${tagName}, Class=${classes}, ID=${id}`);
   });
+
+  console.log(`Page viewed: ${new Date().toLocaleString()}`);
 });
