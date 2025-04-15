@@ -64,12 +64,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelector('.analyze-btn').addEventListener('click', analyzeText);
 
+  // -------------------------------
+  // USER INTERACTION TRACKING LOGIC
+  // -------------------------------
+
+  // Function to get object type
+  function getObjectType(target) {
+    const tag = target.tagName.toLowerCase();
+    const type = target.getAttribute('type');
+    const role = target.getAttribute('role');
+    const aria = target.getAttribute('aria-label');
+    const classList = [...target.classList];
+
+    if (tag === 'img') return 'image';
+    if (tag === 'textarea' || tag === 'input') return 'text input';
+    if (tag === 'button') return 'button';
+    if (tag === 'a') return 'link';
+    if (tag === 'select') return 'drop-down';
+    if (classList.includes('slide')) return 'image slide';
+    if (target.classList.contains('nav-btn')) return 'gallery nav button';
+    if (aria) return `aria-${aria}`;
+    if (role) return `role-${role}`;
+    return `${tag} element`;
+  }
+
+  // Click event logger
   document.addEventListener('click', (e) => {
-    const tagName = e.target.tagName;
-    const classes = e.target.className;
-    const id = e.target.id;
-    console.log(`Click on: Tag=${tagName}, Class=${classes}, ID=${id}`);
+    const timestamp = new Date().toLocaleString();
+    const objectType = getObjectType(e.target);
+    console.log(`${timestamp}, click, ${objectType}`);
   });
 
-  console.log(`Page viewed: ${new Date().toLocaleString()}`);
+  // Page view logger
+  const timestamp = new Date().toLocaleString();
+  console.log(`${timestamp}, view, entire page`);
 });
